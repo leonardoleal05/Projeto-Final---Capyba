@@ -1,0 +1,19 @@
+.header{
+    padding: 20px;
+    text-align: right;    
+    background-color: lightblue;
+}    
+.header-container{
+    text-align: center;
+}
+.container{
+    /* background-color: lightblue; */
+}
+#customizando-checkbox{
+    padding-top: 10px;
+}
+.required:after{
+    content: " *" ;
+    color: red;
+}
+

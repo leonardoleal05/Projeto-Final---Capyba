@@ -1,0 +1,371 @@
+<html>
+
+<head>
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
+		name='viewport' />
+
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/estilo.css" rel="stylesheet">
+	<!-- <link href="css/normalize.css" rel="stylesheet"> -->
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+		integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+</head>
+
+<body>
+	<header >
+		<div class="header">
+			<img src="css/imagem/logo.png" alt="logo" width="160px" height="60px">
+		</div>
+	</header>
+	<div class="container">
+
+		<div class="header-container">
+				<h1>Cadastro Agrícola - Válvulas</h1>
+		</div>
+			
+		<form action="#" method="POST">
+
+			<div class="row">
+				<div class="col-12 my-1">
+					<lable class="control-lable required">Área</lable>
+					<div class="input-group">
+						<input class="form-control" type="search" placeholder="Clique na lupa para consultar"
+							aria-label="Search" style="border-right: none; ">
+						<div class="input-group-append">
+							<div class="input-group-text" style="background-color: #FFF">
+								<i class="fas fa-search" data-toggle="modal" data-target="#ModalArea"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group  col-2">
+					<lable class="control-lable">Código</lable>
+					<input type="number" class="form-control" placeholder="informe o código">
+				</div>
+				<div class="form-group  col-10">
+					<lable class="control-lable">Nome</lable>
+					<input type="text" class="form-control" placeholder="informe o nome">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group col-3	">
+					<label class="control-label">Data do plantio</label>
+					<input type="date" class="form-control">
+				</div>
+				<div class="form-group col-3	">
+					<label class="control-label">Origem da muda</label>
+					<input type="date" class="form-control">
+				</div>
+				<div class="custom-control custom-checkbox" id="customizando-checkbox">
+					<input type="checkbox" class="custom-control-input" id="customCheck1" onclick="onCheckedProducaoClick()">
+					<label class="custom-control-label" for="customCheck1">Produção</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 my-1">
+					<lable class="control-lable">Latada</lable>
+					<div class="input-group">
+						<input class="form-control" type="search" placeholder="Clique na lupa para consultar"
+							aria-label="Search" style="border-right: none; ">
+						<div class="input-group-append">
+							<div class="input-group-text" style="background-color: #FFF">
+								<i class="fas fa-search" data-toggle="modal" data-target="#ModalLatada"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 my-1">
+					<lable class="control-lable" >Variedade</lable>
+					<div class="input-group">
+						<input class="form-control" id="inputVariedade" type="search" placeholder="Clique na lupa para consultar"
+							aria-label="Search" style="border-right: none; ">
+						<div class="input-group-append">
+							<div class="input-group-text" style="background-color: #FFF">
+								<i class="fas fa-search" data-toggle="modal" data-target="#ModalVariedade"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-12 my-1">
+					<lable class="control-lable">Sistema de Irrigação</lable>
+					<div class="input-group">
+						<input class="form-control" type="search" placeholder="Clique na lupa para consultar"
+							aria-label="Search" style="border-right: none; ">
+						<div class="input-group-append">
+							<div class="input-group-text" style="background-color: #FFF">
+								<i class="fas fa-search" data-toggle="modal" data-target="#ModalSistemaIrrigacao"></i></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group col-3	">
+					<label class="control-label">Área Ha</label>
+					<input type="text" class="form-control jsNumber">
+				</div>
+				<div class="form-group col-3	">
+					<label class="control-label">Quantidade ruas</label>
+					<input type="number" class="form-control">
+				</div>
+				<div class="form-group col-3	">
+					<label class="control-label">Quantidade plantas</label>
+					<input type="number" class="form-control">
+				</div>
+				<div class="form-group col-3	">
+					<label class="control-label">CFO da muda</label>
+					<input type="number" class="form-control">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group col-3	">
+					<label class="control-label">Espaço ruas (m)</label>
+					<input type="number" class="form-control">
+				</div>
+				<div class="form-group col-3	">
+					<label class="control-label">Espaço plantas (m)</label>
+					<input type="number" class="form-control">
+				</div>
+				<div class="form-group col-3	">
+					<label class="control-label">Quantidade amostragem</label>
+					<input type="number" class="form-control">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="form-group col-3	">
+					<label class="control-label">Data produção</label>
+					<input type="date" class="form-control">
+				</div>
+				<div class="form-group col-3	">
+					<label class="control-label">Data erradicação</label>
+					<input type="date" class="form-control">
+				</div>
+			</div>
+
+			<div class="row  col-12 text-right">
+				<button class="btn  btn-default" type="reset">Cancelar</button>
+				<button class="btn  btn-primary" type="subimit">Salvar</button>
+			</div>
+
+		</form>
+
+	</div>
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="ModalLatada" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Latada</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+						<table class="table">
+							<thead class="thead-dark">
+								<tr>
+								<th scope="col">#</th>
+								<th scope="col">Descrição</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+								<th scope="row">AC-01</th>
+								<td>AC-01 N11</td>
+								</tr>
+								<tr>
+								<th scope="row">AM-01</th>
+								<td>AM-01/N1</td>
+								</tr>
+								<tr>
+								<th scope="row">AD-01</th>
+								<td>ANDU-01 N12</td>
+								</tr>
+							</tbody>
+						</table>				
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
+					<button type="button" class="btn btn-primary">Incluir</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="ModalArea" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Área</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+						<table class="table">
+							<thead class="thead-dark">
+								<tr>
+								<th scope="col">#</th>
+								<th scope="col">Descrição</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+								<th scope="row">1</th>
+								<td>ACAI-01 N11</td>
+								</tr>
+								<tr>
+								<th scope="row">2</th>
+								<td>AMORA-01/N1</td>
+								</tr>
+								<tr>
+								<th scope="row">3</th>
+								<td>CA-01 N8</td>
+								</tr>
+							</tbody>
+						</table>				
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
+					<button type="button" class="btn btn-primary">Incluir</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="ModalVariedade" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Variedade</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<table class="table">
+						<thead class="thead-dark">
+							<tr>
+							<th scope="col">#</th>
+							<th scope="col">Descrição</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+							<th scope="row">001</th>
+							<td>ALMOXARIFADO</td>
+							</tr>
+							<tr>
+							<th scope="row">001.001</th>
+							<td>INSUMOS</td>
+							</tr>
+							<tr>
+							<th scope="row">001.001.001</th>
+							<td>DEFENSIVOS</td>
+							</tr>
+							<th scope="row">001.001.002</th>
+							<td>ADUBOS</td>
+							</tr>
+							<th scope="row">001.001.003</th>
+							<td>FOLIAR</td>
+							</tr>
+						</tbody>
+					</table>				
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
+					<button type="button" class="btn btn-primary">Incluir</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="ModalSistemaIrrigacao" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Sistema de Irrigação</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<table class="table">
+						<thead class="thead-dark">
+							<tr>
+							<th scope="col">#</th>
+							<th scope="col">Descrição</th>
+							<th scope="col">Eficiência</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+							<th scope="row">1</th>
+							<td>GOTEJO</td>
+							<td>95,00</td>
+							</tr>
+							<tr>
+							<th scope="row">2</th>
+							<td>DIFUSOR</td>
+							<td>80,00</td>
+							</tr>
+						</tbody>
+					</table>				
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Sair</button>
+					<button type="button" class="btn btn-primary">Incluir</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mask.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.maskMoney.min.js"></script>
+<!-- <script>
+	$('.jsNumber').mask('#0.00')
+</script> -->
+<script>
+		$(".jsNumber").maskMoney();
+		// $('.jsNumber').mask('#0.00')
+</script>
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<script type="text/javascript">
+
+	function onCheckedProducaoClick(){
+		document.getElementById('').disabled = false;
+	}
+
+	// var input = $('#customCheck1');
+	// $("#customCheck1").ready(function(){ 
+	// $("#inputVariedade").on("change", function(){
+	// 	console.log("aqui");
+	// 	// .prop("disabled", this.checked); 
+	// });
+	// });
+</script>
+</html>
